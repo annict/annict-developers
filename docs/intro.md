@@ -3,34 +3,19 @@ sidebar_position: 1
 slug: /
 ---
 
-# Tutorial Intro
+# はじめに
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Annictの開発者向けドキュメントへようこそ！
+AnnictはWeb APIを公開しており、ここではそのAPIの使い方などをまとめています。
 
-## Getting Started
+Annictが公開しているWeb APIは以下の2種類あります。お好みのものをお選びください。
 
-Get started by **creating a new site**.
+1. GraphQL API (β)
+2. REST API
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+:::tip
 
-## Generate a new site
+REST API は現状ほぼメンテナンスモードのような状態で、バグ修正以外の変更はしていません。
+GraphQL API のほうにはたまに新機能を追加しており、REST API よりも色々なデータが取得できるので、GraphQL に抵抗が無ければ GraphQL API の使用をオススメします。
 
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+:::
