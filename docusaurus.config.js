@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Annict Developers',
+  tagline: 'AnnictのWeb APIを使ってアプリケーションを作ろう',
+  url: 'https://developers.annict.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'kiraka', // Usually your GitHub org/user name.
+  projectName: 'annict-developers', // Usually your repo name.
 
   presets: [
     [
@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/kiraka/annict-developers/edit/main/docs/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            'https://github.com/kiraka/annict-developers/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -43,22 +43,45 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Developers',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Annict Developers',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'はじめに',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   type: 'doc',
+          //   docId: 'graphql-api',
+          //   position: 'left',
+          //   label: 'GraphQL API (β)',
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'rest-api',
+          //   position: 'left',
+          //   label: 'REST API',
+          // },
+          {to: '/blog', label: 'ブログ', position: 'left'},
+          // {
+          //   type: 'doc',
+          //   docId: 'community',
+          //   position: 'left',
+          //   label: 'コミュニティ',
+          // },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/kiraka/annict',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://annict.com',
+            label: 'Annict',
             position: 'right',
           },
         ],
@@ -70,8 +93,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'はじめに',
                 to: '/docs/intro',
+              },
+              {
+                label: 'GraphQL API (β)',
+                to: '/docs/graphql-api',
+              },
+              {
+                label: 'REST API',
+                to: '/docs/rest-api',
               },
             ],
           },
@@ -79,16 +110,24 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/kiraka/annict',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/PVJRUKP',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/AnnictJP',
+              },
+              {
+                label: 'Twitter (開発者向け)',
+                href: 'https://twitter.com/AnnictDevJP',
+              },
+              {
+                label: 'Annict Forum',
+                href: 'https://annict.com/forum',
               },
             ],
           },
@@ -96,17 +135,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'ブログ',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Annict',
+                href: 'https://annict.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Annict`,
       },
       prism: {
         theme: lightCodeTheme,
