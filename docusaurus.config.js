@@ -94,7 +94,7 @@ const config = {
             items: [
               {
                 label: 'はじめに',
-                to: '/docs/intro',
+                to: '/docs',
               },
               {
                 label: 'GraphQL API (β)',
