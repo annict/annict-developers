@@ -53,20 +53,8 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'はじめに',
+            label: 'ドキュメント',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'graphql-api',
-          //   position: 'left',
-          //   label: 'GraphQL API (β)',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'rest-api',
-          //   position: 'left',
-          //   label: 'REST API',
-          // },
           {to: '/blog', label: 'ブログ', position: 'left'},
           // {
           //   type: 'doc',
