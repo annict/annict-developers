@@ -27,4 +27,4 @@ query {
 ```
 
 上記で使用している `searchWorks` 以外にも、AnnictのGraphQL APIではクエリをいくつか提供しています。
-詳細は<a href="/docs/graphql-api/beta/reference/operation/query/">リファレンスページ</a>をご覧ください。
+詳細は<a href="/docs/graphql-api/beta/reference/operation/query/" target="_blank">GraphQL APIリファレンス</a>をご覧ください。
