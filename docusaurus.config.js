@@ -86,11 +86,11 @@ const config = {
               },
               {
                 label: 'GraphQL API (β)',
-                to: '/docs/graphql-api',
+                to: '/docs/graphql-api/beta',
               },
               {
                 label: 'REST API',
-                to: '/docs/rest-api',
+                to: '/docs/rest-api/v1',
               },
             ],
           },
