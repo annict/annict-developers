@@ -1,0 +1,26 @@
+---
+slug: 2021-10-23-new-annict-developers
+title: Annict Developers を作り直しました
+authors: [shimbaco]
+---
+
+久しぶりの更新です。
+
+今まで `docs.annict.com` という主にREST APIについて書かれたドキュメントページと、
+`developers.annict.jp` という主にGraphQL APIについて書かれたドキュメントページが二つ存在して微妙だったので、
+`developers.annict.com` というドメインでAnnict Developersを作り直し、REST APIとGraphQL APIのドキュメントを集約するようにしました。
+
+今のところ内容はほぼ変わっていないですが、REST APIのドキュメントはページ構成をエンドポイントベースではなくリソースベースに変えています。
+`docs.annict.com` のサイドバーのリンクがめちゃくちゃになっていたので、それを整理した形になります。
+(ホスティングしていたサービスのアップデートによりめちゃくちゃになり、そのまま放置してしまっていた…)
+
+なお旧ページは新しいAnnict Developersにリダイレクトされるようにしています。
+
+ちなみに[Annict Developersを最初に公開したとき](/blog/2018-12-23-hello-world)はVuePressを使って作っていたのですが、
+初期バージョンを使ったまま放置しちゃっていたのと、最近はVueよりReactを使うことが多くなったので、
+[Docusaurus](https://docusaurus.io) で作り直しています。
+
+ソースコードは [github.com/kiraka/annict-developers](https://github.com/kiraka/annict-developers) で公開しているので、
+変なところなどがありましたらPull Requestを送って頂けるとありがたいです。
+
+生まれ変わったAnnict Developersをよろしくお願いします。
