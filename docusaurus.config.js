@@ -15,6 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'kiraka', // Usually your GitHub org/user name.
   projectName: 'annict-developers', // Usually your repo name.
+  trailingSlash: false,
 
   presets: [
     [
