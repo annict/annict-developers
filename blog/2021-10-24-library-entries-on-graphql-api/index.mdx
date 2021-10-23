@@ -1,0 +1,84 @@
+---
+slug: 2021-10-24-library-entries-on-graphql-api
+title: "GraphQL API: ユーザと作品を紐付けを管理する LibraryEntry を追加しました"
+authors: [shimbaco]
+---
+
+ライブラリページや「記録する」ページに表示されているようなデータを取得することができるようになりました。
+
+以下のクエリは、2021年秋アニメの中で自分が `見てる` や `見たい` にしている、
+
+- 作品情報
+- 視聴ステータス
+- 次の未視聴エピソード
+- 次の未視聴エピソードに紐付く放送予定
+- メモ
+
+を取得します。
+
+```graphql
+query {
+  viewer {
+    libraryEntries(
+      states: [WATCHING, WANNA_WATCH],
+      seasons: ["2021-autumn"]
+    ) {
+      nodes {
+        work {
+          title
+        }
+        status {
+          state
+        }
+        nextEpisode {
+          number
+        }
+        nextProgram {
+          channel {
+            name
+          }
+          startedAt
+        }
+        note
+      }
+    }
+  }
+}
+```
+
+このクエリを実行すると以下のようなレスポンスが返ってきます。
+
+```json
+{
+  "data": {
+    "viewer": {
+      "libraryEntries": {
+        "nodes": [
+          {
+            "work": {
+              "title": "無職転生 ～異世界行ったら本気だす～  第2部"
+            },
+            "status": {
+              "state": "WATCHING"
+            },
+            "nextEpisode": {
+              "number": 12
+            },
+            "nextProgram": {
+              "channel": {
+                "name": "TOKYO MX"
+              },
+              "startedAt": "2021-10-03T15:00:00Z"
+            },
+            "note": "おもしろい"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+APIの詳細は<a href="/docs/graphql-api/beta/reference/" target="_blank">GraphQL APIリファレンス</a>をご参照ください。
+
+ライブラリの情報が取得しやすくなったAnnictをよろしくお願いします。
