@@ -1,0 +1,100 @@
+---
+slug: 2022-04-29-iroiro-update
+title: "裏側をいろいろ変えたら少し速くなりました"
+authors: [shimbaco]
+---
+
+import thankYouDokkuImageUrl from './thank-you-dokku.png';
+
+今朝メンテナンスを行い、`annict.com` や `api.annict.com` が動いているサーバに手を入れました。
+主な目的は[以前フォーラムに書いたお知らせ](https://annict.com/forum/posts/1492)にあるサーバ費の節約でしたが、結果的にサイトのパフォーマンスが上がった気がします。
+せっかくなので記念として今回何をしたのかを記録しておこうと思います。
+
+### AWSのアカウントとS3バケットを整理しました
+
+Annictに表示されている画像などはAmazon S3にアップロードされています。
+このS3バケットはAnnictを公開したときくらいからずっと使っているもので、
+Annict関係のS3バケット以外にも雑多なものがこのAWSアカウント配下で管理されており、散らかっていました。
+
+そのため今回の対応で[AWS Organizations](https://aws.amazon.com/jp/organizations/)を使ってAnnictの本番/ステージング環境ごとにAWSアカウントを新たに作り、その中に新たなS3バケットやIAMポリシーなどを作るようにしました。
+また、S3バケットなどは[Terraform](https://www.terraform.io)を使って作るようにしました。
+
+Annictに関してはTerraform化されたAWSアカウントの中にあるものだけで動くようになりましたが、散らかったAWSアカウントにはまだ色々残っているので、少しずつきれいにしていこうと思います。
+
+### imgixからimgproxyに移行しました
+
+[imgix](https://imgix.com)はめちゃくちゃ便利で仕事でも使わせてもらっているんですが、個人で使うには料金が高いという問題がありました。
+なので今回から[imgproxy](https://github.com/imgproxy/imgproxy)というOSSな画像変換サーバを使うことにしました。
+雰囲気で使えるくらい作り込まれていてとても良いです。
+
+### Cloudflareを導入しました
+
+今朝のメンテナンスの前に[しれっと導入しました](https://twitter.com/shimbaco/status/1519297621420314624)。
+
+上に書いたimgproxyはimgixと違いCDNとしての機能は無いので、Cloudflareを経由して配信するようにしました。
+
+あとDNSレコードを[PointDNS](https://pointhq.com)で管理していたんですが、それをやめてCloudflareに用意されているDNSサービスを利用するようにしました。
+別のドメインも管理しているのでまだPointDNSは使い続けていますが、整理を続けたら費用が浮きそうです。
+
+### Railsを6.1から7.0にアップデートしました
+
+費用削減とは特に関係ないですが、Railsのバージョンを上げました。
+まだ上げただけの状態なので、7から使える便利機能をこれから使ってみたいです。
+[Relation#load_async](https://github.com/rails/rails/pull/41372) が気になってます。
+
+### webpackからPropshaftに移行しました
+
+[Propshaft](https://github.com/rails/propshaft)はRails 7から使えるものなので、バージョンを上げただけでもありませんでした。
+
+[jsbundling-rails](https://github.com/rails/jsbundling-rails)と[cssbundling-rails](https://github.com/rails/cssbundling-rails)を使ってJSやCSSをビルドするようにしました。
+ビルド処理が速くなってとても良いです。
+
+### PostgreSQLを11から14にアップデートしました
+
+全然アップデートしていなかったんですが、このタイミングでジャンプしました。
+サイトのパフォーマンスの向上に結構な影響を与えてくれている気がします。(たぶん)
+
+### HerokuからVultr + Dokkuに移行しました
+
+間違いなくパフォーマンスに良い影響を与えてくれたのはこれだと思います。(たぶん)
+
+東京のサーバで動くようになったので、[Heroku](https://www.heroku.com)のレイテンシ問題が解消しました。
+そして今回の対応の目的であるサーバ費用の削減にも繋がりました。
+
+今朝のメンテナンス後の時点では[Linode](https://www.linode.com)のVPSを借りて動かしていたんですが、
+[メールサーバのポートが閉じられている](https://www.linode.com/community/questions/19082/i-just-created-my-first-linode-and-i-cant-send-emails-why)ことに気づき、
+サポートに問い合わせても反応が薄かったので、途中で[Vultr](https://www.vultr.com)のVPSに切り替えました。
+ステージング環境では特に何もしなくてもメールが送れていたので油断していました…。
+
+#### Dokkuが便利
+
+Herokuのデプロイ環境はとても良く、そんなぬるま湯に浸かりすぎていたので、VPSで今から[Capistrano](https://capistranorb.com)とかを使って頑張るのはちょっとな…と思い、
+VPSなどの中でHerokuっぽいことをできるようにしてくれる[Dokku](https://dokku.com)を使い始めました。
+これがめちゃくちゃ良くできています。この記事で一番伝えたいことはこれかもしれません。
+
+アプリを作り、アドオン的なポジションであるサービスを作ってアプリと連携させるということができるようになっていて、構成がVPSの中でHerokuっぽくなります。
+PostgreSQLとかRedisとかはサービスとして作られ、アプリと連携することになります。
+データベースのバックアップをS3のバケットにシュッと送れるようになっていたり、
+[Vector](https://github.com/vectordotdev/vector)を使ってログを外部に転送しやすくしてくれていたりなど、
+運用のときにやりたいことを手厚くカバーしてくれています。
+
+特に良かったのが[Herokuish](https://dokku.com/docs/deployment/builders/herokuish-buildpacks/)です。
+Herokuが提供してくれている[Buildpacks](https://devcenter.heroku.com/articles/buildpacks)はデプロイするときに良い感じのことをしてくれて便利なんですが、
+Herokuishを使うことでHerokuで使っているBuildpacksを使うことができます。
+AnnictはHerokuで動かしているとき以下のBuildpacksを使っていたんですが、Vultr + Dokkuに移行してからも使い続けています。
+なのでRailsを動かすために自分でDockerfileを書いたりはしていません。
+
+- https://github.com/gaffneyc/heroku-buildpack-jemalloc
+- https://github.com/heroku/heroku-buildpack-nodejs
+- https://github.com/heroku/heroku-buildpack-ruby
+
+おかげで移行が楽にできて良かったです。
+
+開発者の方も開発だけでなく[GitHub Issues](https://github.com/dokku/dokku/issues)や[Slack](https://glider-slackin.herokuapp.com)上での利用者からの質問などに素早く対応されていてすごいです。
+
+<img src={thankYouDokkuImageUrl} alt="Thank you Dokku!" />
+
+ということで今回の諸々の対応により無事いくらかサーバ費用が削減できたので、浮いたお金でDokkuのスポンサーになりました。
+Dokkuの開発を長く続けるための一助になれば良いなと思います。
+
+コストが下がってパフォーマンスが上がったAnnictをよろしくお願いします。
