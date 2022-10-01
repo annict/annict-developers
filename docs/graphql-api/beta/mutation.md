@@ -24,4 +24,4 @@ mutation {
 ```
 
 上記の `createRecord` 以外にもAnnict GraphQL APIではいくつかのクエリを提供しています。
-詳細は<a href="/docs/graphql-api/beta/reference/operation/mutation/" target="_blank">GraphQL APIリファレンス</a>をご覧ください。
+詳細は[GraphQL APIリファレンス](/docs/graphql-api/beta/reference)をご覧ください。
