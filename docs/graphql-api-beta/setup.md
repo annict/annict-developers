@@ -17,8 +17,8 @@ GraphQL APIは以下のような方法で操作することができます。
 - `curl` コマンド
 - GUIクライアント
 
-GUIクライアントは [GraphiQL](https://github.com/graphql/graphiql) や [Insomnia](https://insomnia.rest) などがあります。
-このページでは GraphiQL をMacアプリ化した [GraphiQL.app](https://github.com/skevy/graphiql-app) を使用します。
+GUIクライアントは[GraphiQL](https://github.com/graphql/graphiql)や[Insomnia](https://insomnia.rest)などがあります。
+このページではInsomniaを使用します。
 
 ## クエリを実行する
 
@@ -28,7 +28,7 @@ GUIクライアントは [GraphiQL](https://github.com/graphql/graphiql) や [In
 
 ```bash
 $ curl https://api.annict.com/graphql \
--H "Authorization: bearer (アクセストークン)" \
+-H "Authorization: bearer <アクセストークン>" \
 -X POST \
 -d "query=query { viewer { name } }"
 ```
@@ -40,36 +40,34 @@ $ curl https://api.annict.com/graphql \
 {"data":{"viewer":{"name":"Koji Shimba"}}}
 ```
 
-### GraphiQLで実行する
+### Insomniaで実行する
 
-GraphiQLを立ち上げると下の画像ようなウィンドウが表示されます。
-「Welcome to GraphiQL」と書かれている左側のカラムがGraphQLのクエリを入力する場所で、その右はクエリの実行結果を表示する場所になります。
-ちなみに「Welcome to GraphiQL」など書かれている文書はGraphQLのコメントなので、消してしまって問題ありません。
+Insomniaを立ち上げると下の画像ようなウィンドウが表示されます。
 
-![image](https://user-images.githubusercontent.com/56767/50376336-1e2d9e80-064f-11e9-853f-465071d29c90.png)
+![image](https://user-images.githubusercontent.com/56767/192594292-f2fb6e2c-1ec9-4b5c-b374-fb6f4a945c4a.png)
 
-「GraphQL Endpoint」の入力欄に下記エンドポイントを入力します。
+左のカラムにある追加ボタンをクリックし、 `GraphQL Request` をクリックします。
+
+![image](https://user-images.githubusercontent.com/56767/192594629-3882b3d5-fe5d-46c4-b106-b580115075a7.png)
+
+下記エンドポイントを入力します。
 
 ```
 https://api.annict.com/graphql
 ```
 
+![image](https://user-images.githubusercontent.com/56767/192595107-1f9eb181-72d5-471f-a1d8-0f0685bc2030.png)
+
 GraphQL APIにリクエストを投げるとき、エンドポイントは常にこのURLになります。
 
 次にアクセストークンをヘッダに登録します。
-「Edit HTTP Headers」という青いボタンをクリックすると、リクエストヘッダを設定することができます。
+`Auth` タブをクリックし、`Bearer Token` をクリックします。
 
-![image](https://user-images.githubusercontent.com/56767/50376381-65b42a80-064f-11e9-9d3b-7acfb85d56c5.png)
+![image](https://user-images.githubusercontent.com/56767/192595425-a92607fd-87e1-42ea-9e03-7132aeeaf09c.png)
 
-「Add Header」をクリックして以下のように Authorization ヘッダを設定します。
+`TOKEN` 欄にアクセストークンを指定します。
 
-![image](https://user-images.githubusercontent.com/56767/50376385-72388300-064f-11e9-92b6-e6662a82b004.png)
-
-| Header name | Header value |
-| --- | --- |
-| Authorization | Bearer (アクセストークン) |
-
-以上でGraphQL APIを操作するための設定が終わりました。左側のクエリ入力欄に以下のクエリを書いてみます。
+以上でGraphQL APIを操作するための設定が終わりました。`GraphQL` タブをクリックし、以下のクエリを書いてみます。
 
 ```graphql
 query {
@@ -80,6 +78,13 @@ query {
 }
 ```
 
-クエリを入力したあと、入力欄の上にある再生ボタンみたいなものをクリックすると、右側に取得結果が表示されます。
+![image](https://user-images.githubusercontent.com/56767/192596615-c2383b4d-1c93-4c23-9789-24ba91df139e.png)
 
-![image](https://user-images.githubusercontent.com/56767/50376405-c6436780-064f-11e9-8650-c4c77ebf8ece.png)
+クエリを入力したあと、`Send` ボタンをクリックすると、右側に取得結果が表示されます。
+
+![image](https://user-images.githubusercontent.com/56767/192596753-392e6430-ce49-4a2d-a19f-96ac300a37e5.png)
+
+## スキーマを確認する
+
+GraphQL APIが提供するクエリやミューテーションなどはGraphQLクライアントから閲覧することができます。
+Insomniaで閲覧する方法については[Insomniaのドキュメント](https://docs.insomnia.rest/insomnia/graphql-queries)をご参照ください。
