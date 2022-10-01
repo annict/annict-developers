@@ -1,0 +1,43 @@
+---
+id: episode-order-field
+title: EpisodeOrderField
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum EpisodeOrderField {
+  CREATED_AT
+  SORT_NUMBER
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>EpisodeOrderField.<b>CREATED_AT</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EpisodeOrderField.<b>SORT_NUMBER</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`EpisodeOrder`](/docs/graphql-api/beta/reference/inputs/episode-order)  <Badge class="secondary" text="input"/>
+
+
+

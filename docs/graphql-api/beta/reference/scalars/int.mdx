@@ -1,0 +1,30 @@
+---
+id: int
+title: Int
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
+
+```graphql
+scalar Int
+```
+
+
+
+
+### Member of
+
+[`Activity`](/docs/graphql-api/beta/reference/objects/activity)  <Badge class="secondary" text="object"/><Bullet />[`ActivityEdge`](/docs/graphql-api/beta/reference/objects/activity-edge)  <Badge class="secondary" text="object"/><Bullet />[`Cast`](/docs/graphql-api/beta/reference/objects/cast)  <Badge class="secondary" text="object"/><Bullet />[`Channel`](/docs/graphql-api/beta/reference/objects/channel)  <Badge class="secondary" text="object"/><Bullet />[`ChannelGroup`](/docs/graphql-api/beta/reference/objects/channel-group)  <Badge class="secondary" text="object"/><Bullet />[`Character`](/docs/graphql-api/beta/reference/objects/character)  <Badge class="secondary" text="object"/><Bullet />[`Episode`](/docs/graphql-api/beta/reference/objects/episode)  <Badge class="secondary" text="object"/><Bullet />[`MultipleRecord`](/docs/graphql-api/beta/reference/objects/multiple-record)  <Badge class="secondary" text="object"/><Bullet />[`Organization`](/docs/graphql-api/beta/reference/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Person`](/docs/graphql-api/beta/reference/objects/person)  <Badge class="secondary" text="object"/><Bullet />[`Prefecture`](/docs/graphql-api/beta/reference/objects/prefecture)  <Badge class="secondary" text="object"/><Bullet />[`Program`](/docs/graphql-api/beta/reference/objects/program)  <Badge class="secondary" text="object"/><Bullet />[`Record`](/docs/graphql-api/beta/reference/objects/record)  <Badge class="secondary" text="object"/><Bullet />[`Review`](/docs/graphql-api/beta/reference/objects/review)  <Badge class="secondary" text="object"/><Bullet />[`searchCharacters`](/docs/graphql-api/beta/reference/queries/search-characters)  <Badge class="secondary" text="query"/><Bullet />[`searchEpisodes`](/docs/graphql-api/beta/reference/queries/search-episodes)  <Badge class="secondary" text="query"/><Bullet />[`searchOrganizations`](/docs/graphql-api/beta/reference/queries/search-organizations)  <Badge class="secondary" text="query"/><Bullet />[`searchPeople`](/docs/graphql-api/beta/reference/queries/search-people)  <Badge class="secondary" text="query"/><Bullet />[`searchWorks`](/docs/graphql-api/beta/reference/queries/search-works)  <Badge class="secondary" text="query"/><Bullet />[`Series`](/docs/graphql-api/beta/reference/objects/series)  <Badge class="secondary" text="object"/><Bullet />[`Staff`](/docs/graphql-api/beta/reference/objects/staff)  <Badge class="secondary" text="object"/><Bullet />[`Status`](/docs/graphql-api/beta/reference/objects/status)  <Badge class="secondary" text="object"/><Bullet />[`User`](/docs/graphql-api/beta/reference/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Work`](/docs/graphql-api/beta/reference/objects/work)  <Badge class="secondary" text="object"/><Bullet />[`WorkImage`](/docs/graphql-api/beta/reference/objects/work-image)  <Badge class="secondary" text="object"/>
+
+
+

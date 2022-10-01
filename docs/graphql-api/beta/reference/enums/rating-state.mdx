@@ -1,0 +1,53 @@
+---
+id: rating-state
+title: RatingState
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum RatingState {
+  AVERAGE
+  BAD
+  GOOD
+  GREAT
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>RatingState.<b>AVERAGE</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>RatingState.<b>BAD</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>RatingState.<b>GOOD</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>RatingState.<b>GREAT</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`CreateRecordInput`](/docs/graphql-api/beta/reference/inputs/create-record-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateReviewInput`](/docs/graphql-api/beta/reference/inputs/create-review-input)  <Badge class="secondary" text="input"/><Bullet />[`Record`](/docs/graphql-api/beta/reference/objects/record)  <Badge class="secondary" text="object"/><Bullet />[`Review`](/docs/graphql-api/beta/reference/objects/review)  <Badge class="secondary" text="object"/><Bullet />[`UpdateRecordInput`](/docs/graphql-api/beta/reference/inputs/update-record-input)  <Badge class="secondary" text="input"/><Bullet />[`UpdateReviewInput`](/docs/graphql-api/beta/reference/inputs/update-review-input)  <Badge class="secondary" text="input"/>
+
+
+

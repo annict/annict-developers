@@ -1,0 +1,93 @@
+---
+id: series
+title: Series
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Series implements Node {
+  annictId: Int!
+  id: ID!
+  name: String!
+  nameEn: String!
+  nameRo: String!
+  works(
+  after: String
+  before: String
+  first: Int
+  last: Int
+  orderBy: SeriesWorkOrder
+): SeriesWorkConnection
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Series.<b>annictId</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Series.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Series.<b>name</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Series.<b>nameEn</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Series.<b>nameRo</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Series.<b>works</b></code>](#)<Bullet />[`SeriesWorkConnection`](/docs/graphql-api/beta/reference/objects/series-work-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Series.works.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Series.works.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Series.works.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Series.works.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Series.works.<b>orderBy</b></code>](#)<Bullet />[`SeriesWorkOrder`](/docs/graphql-api/beta/reference/inputs/series-work-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Member of
+
+[`Character`](/docs/graphql-api/beta/reference/objects/character)  <Badge class="secondary" text="object"/><Bullet />[`SeriesConnection`](/docs/graphql-api/beta/reference/objects/series-connection)  <Badge class="secondary" text="object"/><Bullet />[`SeriesEdge`](/docs/graphql-api/beta/reference/objects/series-edge)  <Badge class="secondary" text="object"/>
+
+
+

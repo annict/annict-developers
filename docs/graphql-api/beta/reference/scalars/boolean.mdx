@@ -1,0 +1,30 @@
+---
+id: boolean
+title: Boolean
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Boolean` scalar type represents `true` or `false`.
+
+```graphql
+scalar Boolean
+```
+
+
+
+
+### Member of
+
+[`Channel`](/docs/graphql-api/beta/reference/objects/channel)  <Badge class="secondary" text="object"/><Bullet />[`CreateRecordInput`](/docs/graphql-api/beta/reference/inputs/create-record-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateReviewInput`](/docs/graphql-api/beta/reference/inputs/create-review-input)  <Badge class="secondary" text="input"/><Bullet />[`Episode`](/docs/graphql-api/beta/reference/objects/episode)  <Badge class="secondary" text="object"/><Bullet />[`include`](/docs/graphql-api/beta/reference/directives/include)  <Badge class="secondary" text="directive"/><Bullet />[`PageInfo`](/docs/graphql-api/beta/reference/objects/page-info)  <Badge class="secondary" text="object"/><Bullet />[`Program`](/docs/graphql-api/beta/reference/objects/program)  <Badge class="secondary" text="object"/><Bullet />[`Record`](/docs/graphql-api/beta/reference/objects/record)  <Badge class="secondary" text="object"/><Bullet />[`skip`](/docs/graphql-api/beta/reference/directives/skip)  <Badge class="secondary" text="directive"/><Bullet />[`UpdateRecordInput`](/docs/graphql-api/beta/reference/inputs/update-record-input)  <Badge class="secondary" text="input"/><Bullet />[`UpdateReviewInput`](/docs/graphql-api/beta/reference/inputs/update-review-input)  <Badge class="secondary" text="input"/><Bullet />[`User`](/docs/graphql-api/beta/reference/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Work`](/docs/graphql-api/beta/reference/objects/work)  <Badge class="secondary" text="object"/>
+
+
+

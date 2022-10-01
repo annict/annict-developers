@@ -1,0 +1,43 @@
+---
+id: order-direction
+title: OrderDirection
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum OrderDirection {
+  ASC
+  DESC
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>OrderDirection.<b>ASC</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrderDirection.<b>DESC</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`ActivityOrder`](/docs/graphql-api/beta/reference/inputs/activity-order)  <Badge class="secondary" text="input"/><Bullet />[`CastOrder`](/docs/graphql-api/beta/reference/inputs/cast-order)  <Badge class="secondary" text="input"/><Bullet />[`CharacterOrder`](/docs/graphql-api/beta/reference/inputs/character-order)  <Badge class="secondary" text="input"/><Bullet />[`EpisodeOrder`](/docs/graphql-api/beta/reference/inputs/episode-order)  <Badge class="secondary" text="input"/><Bullet />[`LibraryEntryOrder`](/docs/graphql-api/beta/reference/inputs/library-entry-order)  <Badge class="secondary" text="input"/><Bullet />[`OrganizationOrder`](/docs/graphql-api/beta/reference/inputs/organization-order)  <Badge class="secondary" text="input"/><Bullet />[`PersonOrder`](/docs/graphql-api/beta/reference/inputs/person-order)  <Badge class="secondary" text="input"/><Bullet />[`ProgramOrder`](/docs/graphql-api/beta/reference/inputs/program-order)  <Badge class="secondary" text="input"/><Bullet />[`RecordOrder`](/docs/graphql-api/beta/reference/inputs/record-order)  <Badge class="secondary" text="input"/><Bullet />[`ReviewOrder`](/docs/graphql-api/beta/reference/inputs/review-order)  <Badge class="secondary" text="input"/><Bullet />[`SeriesWorkOrder`](/docs/graphql-api/beta/reference/inputs/series-work-order)  <Badge class="secondary" text="input"/><Bullet />[`StaffOrder`](/docs/graphql-api/beta/reference/inputs/staff-order)  <Badge class="secondary" text="input"/><Bullet />[`WorkOrder`](/docs/graphql-api/beta/reference/inputs/work-order)  <Badge class="secondary" text="input"/>
+
+
+

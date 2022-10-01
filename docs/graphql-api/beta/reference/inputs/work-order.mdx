@@ -1,0 +1,43 @@
+---
+id: work-order
+title: WorkOrder
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input WorkOrder {
+  direction: OrderDirection!
+  field: WorkOrderField!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkOrder.<b>direction</b></code>](#)<Bullet />[`OrderDirection!`](/docs/graphql-api/beta/reference/enums/order-direction) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkOrder.<b>field</b></code>](#)<Bullet />[`WorkOrderField!`](/docs/graphql-api/beta/reference/enums/work-order-field) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+
+
+### Member of
+
+[`searchWorks`](/docs/graphql-api/beta/reference/queries/search-works)  <Badge class="secondary" text="query"/>
+
+
+

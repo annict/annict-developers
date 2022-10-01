@@ -1,0 +1,48 @@
+---
+id: channel-connection
+title: ChannelConnection
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The connection type for Channel.
+
+```graphql
+type ChannelConnection {
+  edges: [ChannelEdge]
+  nodes: [Channel]
+  pageInfo: PageInfo!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>ChannelConnection.<b>edges</b></code>](#)<Bullet />[`[ChannelEdge]`](/docs/graphql-api/beta/reference/objects/channel-edge) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> A list of edges.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ChannelConnection.<b>nodes</b></code>](#)<Bullet />[`[Channel]`](/docs/graphql-api/beta/reference/objects/channel) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> A list of nodes.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ChannelConnection.<b>pageInfo</b></code>](#)<Bullet />[`PageInfo!`](/docs/graphql-api/beta/reference/objects/page-info) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> Information to aid in pagination.
+> 
+
+
+
+### Member of
+
+[`ChannelGroup`](/docs/graphql-api/beta/reference/objects/channel-group)  <Badge class="secondary" text="object"/>
+
+
+

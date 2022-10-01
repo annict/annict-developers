@@ -1,0 +1,143 @@
+---
+id: episode
+title: Episode
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An episode of a work
+
+```graphql
+type Episode implements Node {
+  annictId: Int!
+  id: ID!
+  nextEpisode: Episode
+  number: Int
+  numberText: String
+  prevEpisode: Episode
+  recordCommentsCount: Int!
+  records(
+  after: String
+  before: String
+  first: Int
+  hasComment: Boolean
+  last: Int
+  orderBy: RecordOrder
+): RecordConnection
+  recordsCount: Int!
+  satisfactionRate: Float
+  sortNumber: Int!
+  title: String
+  viewerDidTrack: Boolean!
+  viewerRecordsCount: Int!
+  work: Work!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>annictId</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>nextEpisode</b></code>](#)<Bullet />[`Episode`](/docs/graphql-api/beta/reference/objects/episode) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>number</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>numberText</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>prevEpisode</b></code>](#)<Bullet />[`Episode`](/docs/graphql-api/beta/reference/objects/episode) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>recordCommentsCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>records</b></code>](#)<Bullet />[`RecordConnection`](/docs/graphql-api/beta/reference/objects/record-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Episode.records.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Episode.records.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Episode.records.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Episode.records.<b>hasComment</b></code>](#)<Bullet />[`Boolean`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Episode.records.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Episode.records.<b>orderBy</b></code>](#)<Bullet />[`RecordOrder`](/docs/graphql-api/beta/reference/inputs/record-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>recordsCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>satisfactionRate</b></code>](#)<Bullet />[`Float`](/docs/graphql-api/beta/reference/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>sortNumber</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>title</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>viewerDidTrack</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>viewerRecordsCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Episode.<b>work</b></code>](#)<Bullet />[`Work!`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Member of
+
+[`DeleteRecordPayload`](/docs/graphql-api/beta/reference/objects/delete-record-payload)  <Badge class="secondary" text="object"/><Bullet />[`Episode`](/docs/graphql-api/beta/reference/objects/episode)  <Badge class="secondary" text="object"/><Bullet />[`EpisodeConnection`](/docs/graphql-api/beta/reference/objects/episode-connection)  <Badge class="secondary" text="object"/><Bullet />[`EpisodeEdge`](/docs/graphql-api/beta/reference/objects/episode-edge)  <Badge class="secondary" text="object"/><Bullet />[`LibraryEntry`](/docs/graphql-api/beta/reference/objects/library-entry)  <Badge class="secondary" text="object"/><Bullet />[`Program`](/docs/graphql-api/beta/reference/objects/program)  <Badge class="secondary" text="object"/><Bullet />[`Record`](/docs/graphql-api/beta/reference/objects/record)  <Badge class="secondary" text="object"/>
+
+
+
