@@ -2,7 +2,7 @@
 
 ```
 $ yarn
-$ yarn start
+$ yarn start -p 3100
 $ yarn build
 ```
 
