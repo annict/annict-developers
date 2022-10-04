@@ -18,6 +18,7 @@ An edge in a connection.
 ```graphql
 type SeriesWorkEdge {
   cursor: String!
+  item: Work!
   node: Work!
   summary: String
   summaryEn: String
@@ -31,8 +32,12 @@ type SeriesWorkEdge {
 > A cursor for use in pagination.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>SeriesWorkEdge.<b>node</b></code>](#)<Bullet />[`Work!`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+#### [<code style={{ fontWeight: 'normal' }}>SeriesWorkEdge.<b>item</b></code>](#)<Bullet />[`Work!`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
 > 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>SeriesWorkEdge.<b>node</b></code>](#)<Bullet />[`Work!`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> Deprecated: Use `item` instead.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>SeriesWorkEdge.<b>summary</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>

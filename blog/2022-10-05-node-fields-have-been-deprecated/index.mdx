@@ -1,0 +1,20 @@
+---
+slug: 2022-10-05-node-fields-have-been-deprecated
+title: "GraphQL APIの一部フィールドを非推奨にしました"
+authors: [shimbaco]
+---
+
+[ActivityEdge.node](https://developers.annict.com/docs/graphql-api/beta/reference/objects/activity-edge) と
+[SeriesWorkEdge.node](https://developers.annict.com/docs/graphql-api/beta/reference/objects/series-work-edge)
+というフィールド (以下 `.node` と表記します) があるんですが、実装を間違っていたようで、すでに存在するフィールドを上書きするようなことをしてしまっていました。
+
+それが原因でGraphQL APIの実装で使用している [graphql](https://github.com/rmosolgo/graphql-ruby) というライブラリの
+アップデートが難しい状態になっているため、これらを非推奨とし、代わりに `ActivityEdge.item` と `SeriesWorkEdge.item` というフィールド (以下 `.item` と表記します) を用意しました。
+これらは現状の `.node` と同じ値を返すようにしています。
+
+もし `.node` を使用している場合は、単純に `.item` に書き換えるだけで問題ないはずです。
+
+**`.node` は1ヶ月後の11月5日以降に上書きをしていないときの値を返すようにします。**
+もしこれらのフィールドを使っている場合は、お手数ですがそれまでに書き換えをお願いします。
+
+GraphQL APIのスキーマを整理したいAnnictをよろしくお願いします。

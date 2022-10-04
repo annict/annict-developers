@@ -20,6 +20,7 @@ type ActivityEdge {
   action: ActivityAction!
   annictId: Int!
   cursor: String!
+  item: ActivityItem
   node: ActivityItem
   user: User!
 }
@@ -40,8 +41,12 @@ type ActivityEdge {
 > A cursor for use in pagination.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>ActivityEdge.<b>node</b></code>](#)<Bullet />[`ActivityItem`](/docs/graphql-api/beta/reference/unions/activity-item) <Badge class="secondary" text="union"/>
+#### [<code style={{ fontWeight: 'normal' }}>ActivityEdge.<b>item</b></code>](#)<Bullet />[`ActivityItem`](/docs/graphql-api/beta/reference/unions/activity-item) <Badge class="secondary" text="union"/>
 > 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ActivityEdge.<b>node</b></code>](#)<Bullet />[`ActivityItem`](/docs/graphql-api/beta/reference/unions/activity-item) <Badge class="secondary" text="union"/>
+> Deprecated: Use `item` instead.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>ActivityEdge.<b>user</b></code>](#)<Bullet />[`User!`](/docs/graphql-api/beta/reference/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
