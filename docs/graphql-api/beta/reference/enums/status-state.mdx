@@ -1,0 +1,63 @@
+---
+id: status-state
+title: StatusState
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum StatusState {
+  NO_STATE
+  ON_HOLD
+  STOP_WATCHING
+  WANNA_WATCH
+  WATCHED
+  WATCHING
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>StatusState.<b>NO_STATE</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>StatusState.<b>ON_HOLD</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>StatusState.<b>STOP_WATCHING</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>StatusState.<b>WANNA_WATCH</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>StatusState.<b>WATCHED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>StatusState.<b>WATCHING</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`Status`](/docs/graphql-api/beta/reference/objects/status)  <Badge class="secondary" text="object"/><Bullet />[`UpdateStatusInput`](/docs/graphql-api/beta/reference/inputs/update-status-input)  <Badge class="secondary" text="input"/><Bullet />[`Work`](/docs/graphql-api/beta/reference/objects/work)  <Badge class="secondary" text="object"/>
+
+
+

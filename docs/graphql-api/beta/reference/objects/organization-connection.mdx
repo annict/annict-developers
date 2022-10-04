@@ -1,0 +1,48 @@
+---
+id: organization-connection
+title: OrganizationConnection
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The connection type for Organization.
+
+```graphql
+type OrganizationConnection {
+  edges: [OrganizationEdge]
+  nodes: [Organization]
+  pageInfo: PageInfo!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationConnection.<b>edges</b></code>](#)<Bullet />[`[OrganizationEdge]`](/docs/graphql-api/beta/reference/objects/organization-edge) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> A list of edges.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationConnection.<b>nodes</b></code>](#)<Bullet />[`[Organization]`](/docs/graphql-api/beta/reference/objects/organization) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> A list of nodes.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationConnection.<b>pageInfo</b></code>](#)<Bullet />[`PageInfo!`](/docs/graphql-api/beta/reference/objects/page-info) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> Information to aid in pagination.
+> 
+
+
+
+### Returned by
+
+[`searchOrganizations`](/docs/graphql-api/beta/reference/queries/search-organizations)  <Badge class="secondary" text="query"/>
+
+
+

@@ -1,0 +1,48 @@
+---
+id: person-connection
+title: PersonConnection
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The connection type for Person.
+
+```graphql
+type PersonConnection {
+  edges: [PersonEdge]
+  nodes: [Person]
+  pageInfo: PageInfo!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PersonConnection.<b>edges</b></code>](#)<Bullet />[`[PersonEdge]`](/docs/graphql-api/beta/reference/objects/person-edge) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> A list of edges.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PersonConnection.<b>nodes</b></code>](#)<Bullet />[`[Person]`](/docs/graphql-api/beta/reference/objects/person) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> A list of nodes.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PersonConnection.<b>pageInfo</b></code>](#)<Bullet />[`PageInfo!`](/docs/graphql-api/beta/reference/objects/page-info) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> Information to aid in pagination.
+> 
+
+
+
+### Returned by
+
+[`searchPeople`](/docs/graphql-api/beta/reference/queries/search-people)  <Badge class="secondary" text="query"/>
+
+
+

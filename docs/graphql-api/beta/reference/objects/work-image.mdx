@@ -1,0 +1,98 @@
+---
+id: work-image
+title: WorkImage
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type WorkImage implements Node {
+  annictId: Int
+  copyright: String
+  facebookOgImageUrl: String
+  id: ID!
+  internalUrl(
+  size: String!
+): String
+  recommendedImageUrl: String
+  twitterAvatarUrl: String
+  twitterBiggerAvatarUrl: String
+  twitterMiniAvatarUrl: String
+  twitterNormalAvatarUrl: String
+  work: Work
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>annictId</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>copyright</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>facebookOgImageUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>internalUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>WorkImage.internalUrl.<b>size</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>recommendedImageUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>twitterAvatarUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>twitterBiggerAvatarUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>twitterMiniAvatarUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>twitterNormalAvatarUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>WorkImage.<b>work</b></code>](#)<Bullet />[`Work`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="object"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Member of
+
+[`Work`](/docs/graphql-api/beta/reference/objects/work)  <Badge class="secondary" text="object"/>
+
+
+

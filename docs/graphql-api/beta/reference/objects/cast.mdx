@@ -1,0 +1,79 @@
+---
+id: cast
+title: Cast
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Cast implements Node {
+  annictId: Int!
+  character: Character!
+  id: ID!
+  name: String!
+  nameEn: String!
+  person: Person!
+  sortNumber: Int!
+  work: Work!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>annictId</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>character</b></code>](#)<Bullet />[`Character!`](/docs/graphql-api/beta/reference/objects/character) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>name</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>nameEn</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>person</b></code>](#)<Bullet />[`Person!`](/docs/graphql-api/beta/reference/objects/person) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>sortNumber</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Cast.<b>work</b></code>](#)<Bullet />[`Work!`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Member of
+
+[`CastConnection`](/docs/graphql-api/beta/reference/objects/cast-connection)  <Badge class="secondary" text="object"/><Bullet />[`CastEdge`](/docs/graphql-api/beta/reference/objects/cast-edge)  <Badge class="secondary" text="object"/>
+
+
+

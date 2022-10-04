@@ -1,0 +1,43 @@
+---
+id: organization-edge
+title: OrganizationEdge
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An edge in a connection.
+
+```graphql
+type OrganizationEdge {
+  cursor: String!
+  node: Organization
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationEdge.<b>cursor</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> A cursor for use in pagination.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationEdge.<b>node</b></code>](#)<Bullet />[`Organization`](/docs/graphql-api/beta/reference/objects/organization) <Badge class="secondary" text="object"/>
+> The item at the end of the edge.
+> 
+
+
+
+### Member of
+
+[`OrganizationConnection`](/docs/graphql-api/beta/reference/objects/organization-connection)  <Badge class="secondary" text="object"/>
+
+
+

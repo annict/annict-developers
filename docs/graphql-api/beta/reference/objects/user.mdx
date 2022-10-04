@@ -1,0 +1,420 @@
+---
+id: user
+title: User
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type User implements Node {
+  activities(
+  after: String
+  before: String
+  first: Int
+  last: Int
+  orderBy: ActivityOrder
+): ActivityConnection
+  annictId: Int!
+  avatarUrl: String
+  backgroundImageUrl: String
+  createdAt: DateTime!
+  description: String!
+  email: String
+  followers(
+  after: String
+  before: String
+  first: Int
+  last: Int
+): UserConnection
+  followersCount: Int!
+  following(
+  after: String
+  before: String
+  first: Int
+  last: Int
+): UserConnection
+  followingActivities(
+  after: String
+  before: String
+  first: Int
+  last: Int
+  orderBy: ActivityOrder
+): ActivityConnection
+  followingsCount: Int!
+  id: ID!
+  libraryEntries(
+  after: String
+  before: String
+  first: Int
+  last: Int
+  orderBy: LibraryEntryOrder
+  seasonFrom: String
+  seasonUntil: String
+  seasons: [String!]
+  states: [StatusState!]
+): LibraryEntryConnection
+  name: String!
+  notificationsCount: Int
+  onHoldCount: Int!
+  programs(
+  after: String
+  before: String
+  first: Int
+  last: Int
+  orderBy: ProgramOrder
+  unwatched: Boolean
+): ProgramConnection
+  records(
+  after: String
+  before: String
+  first: Int
+  hasComment: Boolean
+  last: Int
+  orderBy: RecordOrder
+): RecordConnection
+  recordsCount: Int!
+  stopWatchingCount: Int!
+  url: String
+  username: String!
+  viewerCanFollow: Boolean!
+  viewerIsFollowing: Boolean!
+  wannaWatchCount: Int!
+  watchedCount: Int!
+  watchingCount: Int!
+  works(
+  after: String
+  annictIds: [Int!]
+  before: String
+  first: Int
+  last: Int
+  orderBy: WorkOrder
+  seasons: [String!]
+  state: StatusState
+  titles: [String!]
+): WorkConnection
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>activities</b></code>](#)<Bullet />[`ActivityConnection`](/docs/graphql-api/beta/reference/objects/activity-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.activities.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.activities.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.activities.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.activities.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.activities.<b>orderBy</b></code>](#)<Bullet />[`ActivityOrder`](/docs/graphql-api/beta/reference/inputs/activity-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>annictId</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>avatarUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>backgroundImageUrl</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/graphql-api/beta/reference/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>description</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>email</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>followers</b></code>](#)<Bullet />[`UserConnection`](/docs/graphql-api/beta/reference/objects/user-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.followers.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followers.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followers.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followers.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>followersCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>following</b></code>](#)<Bullet />[`UserConnection`](/docs/graphql-api/beta/reference/objects/user-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.following.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.following.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.following.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.following.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>followingActivities</b></code>](#)<Bullet />[`ActivityConnection`](/docs/graphql-api/beta/reference/objects/activity-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.followingActivities.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followingActivities.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followingActivities.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followingActivities.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.followingActivities.<b>orderBy</b></code>](#)<Bullet />[`ActivityOrder`](/docs/graphql-api/beta/reference/inputs/activity-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>followingsCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>libraryEntries</b></code>](#)<Bullet />[`LibraryEntryConnection`](/docs/graphql-api/beta/reference/objects/library-entry-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>orderBy</b></code>](#)<Bullet />[`LibraryEntryOrder`](/docs/graphql-api/beta/reference/inputs/library-entry-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>seasonFrom</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 指定したシーズンからの作品を取得する
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>seasonUntil</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 指定したシーズンまでの作品を取得する
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>seasons</b></code>](#)<Bullet />[`[String!]`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 指定したシーズンの作品を取得する
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.libraryEntries.<b>states</b></code>](#)<Bullet />[`[StatusState!]`](/docs/graphql-api/beta/reference/enums/status-state) <Badge class="secondary" text="list"/> <Badge class="secondary" text="enum"/>
+> 視聴ステータス
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>name</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>notificationsCount</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>onHoldCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>programs</b></code>](#)<Bullet />[`ProgramConnection`](/docs/graphql-api/beta/reference/objects/program-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.programs.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.programs.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.programs.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.programs.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.programs.<b>orderBy</b></code>](#)<Bullet />[`ProgramOrder`](/docs/graphql-api/beta/reference/inputs/program-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.programs.<b>unwatched</b></code>](#)<Bullet />[`Boolean`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>records</b></code>](#)<Bullet />[`RecordConnection`](/docs/graphql-api/beta/reference/objects/record-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.records.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.records.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.records.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.records.<b>hasComment</b></code>](#)<Bullet />[`Boolean`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.records.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.records.<b>orderBy</b></code>](#)<Bullet />[`RecordOrder`](/docs/graphql-api/beta/reference/inputs/record-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>recordsCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>stopWatchingCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>url</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>username</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>viewerCanFollow</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>viewerIsFollowing</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>wannaWatchCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>watchedCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>watchingCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>works</b></code>](#)<Bullet />[`WorkConnection`](/docs/graphql-api/beta/reference/objects/work-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>annictIds</b></code>](#)<Bullet />[`[Int!]`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>orderBy</b></code>](#)<Bullet />[`WorkOrder`](/docs/graphql-api/beta/reference/inputs/work-order) <Badge class="secondary" text="input"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>seasons</b></code>](#)<Bullet />[`[String!]`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>state</b></code>](#)<Bullet />[`StatusState`](/docs/graphql-api/beta/reference/enums/status-state) <Badge class="secondary" text="enum"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>User.works.<b>titles</b></code>](#)<Bullet />[`[String!]`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Returned by
+
+[`user`](/docs/graphql-api/beta/reference/queries/user)  <Badge class="secondary" text="query"/><Bullet />[`viewer`](/docs/graphql-api/beta/reference/queries/viewer)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`Activity`](/docs/graphql-api/beta/reference/objects/activity)  <Badge class="secondary" text="object"/><Bullet />[`ActivityEdge`](/docs/graphql-api/beta/reference/objects/activity-edge)  <Badge class="secondary" text="object"/><Bullet />[`LibraryEntry`](/docs/graphql-api/beta/reference/objects/library-entry)  <Badge class="secondary" text="object"/><Bullet />[`MultipleRecord`](/docs/graphql-api/beta/reference/objects/multiple-record)  <Badge class="secondary" text="object"/><Bullet />[`Record`](/docs/graphql-api/beta/reference/objects/record)  <Badge class="secondary" text="object"/><Bullet />[`Review`](/docs/graphql-api/beta/reference/objects/review)  <Badge class="secondary" text="object"/><Bullet />[`Status`](/docs/graphql-api/beta/reference/objects/status)  <Badge class="secondary" text="object"/><Bullet />[`UserConnection`](/docs/graphql-api/beta/reference/objects/user-connection)  <Badge class="secondary" text="object"/><Bullet />[`UserEdge`](/docs/graphql-api/beta/reference/objects/user-edge)  <Badge class="secondary" text="object"/>
+
+
+

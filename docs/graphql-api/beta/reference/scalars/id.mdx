@@ -1,0 +1,30 @@
+---
+id: id
+title: ID
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
+
+```graphql
+scalar ID
+```
+
+
+
+
+### Member of
+
+[`Activity`](/docs/graphql-api/beta/reference/objects/activity)  <Badge class="secondary" text="object"/><Bullet />[`Cast`](/docs/graphql-api/beta/reference/objects/cast)  <Badge class="secondary" text="object"/><Bullet />[`Channel`](/docs/graphql-api/beta/reference/objects/channel)  <Badge class="secondary" text="object"/><Bullet />[`ChannelGroup`](/docs/graphql-api/beta/reference/objects/channel-group)  <Badge class="secondary" text="object"/><Bullet />[`Character`](/docs/graphql-api/beta/reference/objects/character)  <Badge class="secondary" text="object"/><Bullet />[`CreateRecordInput`](/docs/graphql-api/beta/reference/inputs/create-record-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateReviewInput`](/docs/graphql-api/beta/reference/inputs/create-review-input)  <Badge class="secondary" text="input"/><Bullet />[`DeleteRecordInput`](/docs/graphql-api/beta/reference/inputs/delete-record-input)  <Badge class="secondary" text="input"/><Bullet />[`DeleteReviewInput`](/docs/graphql-api/beta/reference/inputs/delete-review-input)  <Badge class="secondary" text="input"/><Bullet />[`Episode`](/docs/graphql-api/beta/reference/objects/episode)  <Badge class="secondary" text="object"/><Bullet />[`LibraryEntry`](/docs/graphql-api/beta/reference/objects/library-entry)  <Badge class="secondary" text="object"/><Bullet />[`MultipleRecord`](/docs/graphql-api/beta/reference/objects/multiple-record)  <Badge class="secondary" text="object"/><Bullet />[`Node`](/docs/graphql-api/beta/reference/interfaces/node)  <Badge class="secondary" text="interface"/><Bullet />[`node`](/docs/graphql-api/beta/reference/queries/node)  <Badge class="secondary" text="query"/><Bullet />[`nodes`](/docs/graphql-api/beta/reference/queries/nodes)  <Badge class="secondary" text="query"/><Bullet />[`Organization`](/docs/graphql-api/beta/reference/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Person`](/docs/graphql-api/beta/reference/objects/person)  <Badge class="secondary" text="object"/><Bullet />[`Prefecture`](/docs/graphql-api/beta/reference/objects/prefecture)  <Badge class="secondary" text="object"/><Bullet />[`Program`](/docs/graphql-api/beta/reference/objects/program)  <Badge class="secondary" text="object"/><Bullet />[`Record`](/docs/graphql-api/beta/reference/objects/record)  <Badge class="secondary" text="object"/><Bullet />[`Review`](/docs/graphql-api/beta/reference/objects/review)  <Badge class="secondary" text="object"/><Bullet />[`Series`](/docs/graphql-api/beta/reference/objects/series)  <Badge class="secondary" text="object"/><Bullet />[`Staff`](/docs/graphql-api/beta/reference/objects/staff)  <Badge class="secondary" text="object"/><Bullet />[`Status`](/docs/graphql-api/beta/reference/objects/status)  <Badge class="secondary" text="object"/><Bullet />[`UpdateRecordInput`](/docs/graphql-api/beta/reference/inputs/update-record-input)  <Badge class="secondary" text="input"/><Bullet />[`UpdateReviewInput`](/docs/graphql-api/beta/reference/inputs/update-review-input)  <Badge class="secondary" text="input"/><Bullet />[`UpdateStatusInput`](/docs/graphql-api/beta/reference/inputs/update-status-input)  <Badge class="secondary" text="input"/><Bullet />[`User`](/docs/graphql-api/beta/reference/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Work`](/docs/graphql-api/beta/reference/objects/work)  <Badge class="secondary" text="object"/><Bullet />[`WorkImage`](/docs/graphql-api/beta/reference/objects/work-image)  <Badge class="secondary" text="object"/>
+
+
+

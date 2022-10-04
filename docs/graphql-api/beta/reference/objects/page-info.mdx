@@ -1,0 +1,53 @@
+---
+id: page-info
+title: PageInfo
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Information about pagination in a connection.
+
+```graphql
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PageInfo.<b>endCursor</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> When paginating forwards, the cursor to continue.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PageInfo.<b>hasNextPage</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> When paginating forwards, are there more items?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PageInfo.<b>hasPreviousPage</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> When paginating backwards, are there more items?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PageInfo.<b>startCursor</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> When paginating backwards, the cursor to continue.
+> 
+
+
+
+### Member of
+
+[`ActivityConnection`](/docs/graphql-api/beta/reference/objects/activity-connection)  <Badge class="secondary" text="object"/><Bullet />[`CastConnection`](/docs/graphql-api/beta/reference/objects/cast-connection)  <Badge class="secondary" text="object"/><Bullet />[`ChannelConnection`](/docs/graphql-api/beta/reference/objects/channel-connection)  <Badge class="secondary" text="object"/><Bullet />[`CharacterConnection`](/docs/graphql-api/beta/reference/objects/character-connection)  <Badge class="secondary" text="object"/><Bullet />[`EpisodeConnection`](/docs/graphql-api/beta/reference/objects/episode-connection)  <Badge class="secondary" text="object"/><Bullet />[`LibraryEntryConnection`](/docs/graphql-api/beta/reference/objects/library-entry-connection)  <Badge class="secondary" text="object"/><Bullet />[`OrganizationConnection`](/docs/graphql-api/beta/reference/objects/organization-connection)  <Badge class="secondary" text="object"/><Bullet />[`PersonConnection`](/docs/graphql-api/beta/reference/objects/person-connection)  <Badge class="secondary" text="object"/><Bullet />[`ProgramConnection`](/docs/graphql-api/beta/reference/objects/program-connection)  <Badge class="secondary" text="object"/><Bullet />[`RecordConnection`](/docs/graphql-api/beta/reference/objects/record-connection)  <Badge class="secondary" text="object"/><Bullet />[`ReviewConnection`](/docs/graphql-api/beta/reference/objects/review-connection)  <Badge class="secondary" text="object"/><Bullet />[`SeriesConnection`](/docs/graphql-api/beta/reference/objects/series-connection)  <Badge class="secondary" text="object"/><Bullet />[`SeriesWorkConnection`](/docs/graphql-api/beta/reference/objects/series-work-connection)  <Badge class="secondary" text="object"/><Bullet />[`StaffConnection`](/docs/graphql-api/beta/reference/objects/staff-connection)  <Badge class="secondary" text="object"/><Bullet />[`UserConnection`](/docs/graphql-api/beta/reference/objects/user-connection)  <Badge class="secondary" text="object"/><Bullet />[`WorkConnection`](/docs/graphql-api/beta/reference/objects/work-connection)  <Badge class="secondary" text="object"/>
+
+
+

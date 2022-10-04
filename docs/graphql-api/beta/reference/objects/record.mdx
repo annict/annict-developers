@@ -1,0 +1,118 @@
+---
+id: record
+title: Record
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Record implements Node {
+  annictId: Int!
+  comment: String
+  commentsCount: Int!
+  createdAt: DateTime!
+  episode: Episode!
+  facebookClickCount: Int!
+  id: ID!
+  likesCount: Int!
+  modified: Boolean!
+  rating: Float
+  ratingState: RatingState
+  twitterClickCount: Int!
+  updatedAt: DateTime!
+  user: User!
+  work: Work!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>annictId</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>comment</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>commentsCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/graphql-api/beta/reference/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>episode</b></code>](#)<Bullet />[`Episode!`](/docs/graphql-api/beta/reference/objects/episode) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>facebookClickCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>likesCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>modified</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>rating</b></code>](#)<Bullet />[`Float`](/docs/graphql-api/beta/reference/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>ratingState</b></code>](#)<Bullet />[`RatingState`](/docs/graphql-api/beta/reference/enums/rating-state) <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>twitterClickCount</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>updatedAt</b></code>](#)<Bullet />[`DateTime!`](/docs/graphql-api/beta/reference/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>user</b></code>](#)<Bullet />[`User!`](/docs/graphql-api/beta/reference/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Record.<b>work</b></code>](#)<Bullet />[`Work!`](/docs/graphql-api/beta/reference/objects/work) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Member of
+
+[`CreateRecordPayload`](/docs/graphql-api/beta/reference/objects/create-record-payload)  <Badge class="secondary" text="object"/><Bullet />[`RecordConnection`](/docs/graphql-api/beta/reference/objects/record-connection)  <Badge class="secondary" text="object"/><Bullet />[`RecordEdge`](/docs/graphql-api/beta/reference/objects/record-edge)  <Badge class="secondary" text="object"/><Bullet />[`UpdateRecordPayload`](/docs/graphql-api/beta/reference/objects/update-record-payload)  <Badge class="secondary" text="object"/>
+
+### Implemented by
+
+[`ActivityItem`](/docs/graphql-api/beta/reference/unions/activity-item)  <Badge class="secondary" text="union"/>
+
+
+

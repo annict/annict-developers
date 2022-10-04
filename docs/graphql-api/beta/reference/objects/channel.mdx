@@ -1,0 +1,93 @@
+---
+id: channel
+title: Channel
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Channel implements Node {
+  annictId: Int!
+  channelGroup: ChannelGroup!
+  id: ID!
+  name: String!
+  programs(
+  after: String
+  before: String
+  first: Int
+  last: Int
+): ProgramConnection
+  published: Boolean!
+  scChid: Int!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>annictId</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>channelGroup</b></code>](#)<Bullet />[`ChannelGroup!`](/docs/graphql-api/beta/reference/objects/channel-group) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/graphql-api/beta/reference/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>name</b></code>](#)<Bullet />[`String!`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>programs</b></code>](#)<Bullet />[`ProgramConnection`](/docs/graphql-api/beta/reference/objects/program-connection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Channel.programs.<b>after</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come after the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Channel.programs.<b>before</b></code>](#)<Bullet />[`String`](/docs/graphql-api/beta/reference/scalars/string) <Badge class="secondary" text="scalar"/>
+> Returns the elements in the list that come before the specified cursor.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Channel.programs.<b>first</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the first _n_ elements from the list.
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Channel.programs.<b>last</b></code>](#)<Bullet />[`Int`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="scalar"/>
+> Returns the last _n_ elements from the list.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>published</b></code>](#)<Bullet />[`Boolean!`](/docs/graphql-api/beta/reference/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Channel.<b>scChid</b></code>](#)<Bullet />[`Int!`](/docs/graphql-api/beta/reference/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/graphql-api/beta/reference/interfaces/node) <Badge class="secondary" text="interface"/>
+> An object with an ID.
+> 
+
+
+
+### Member of
+
+[`ChannelConnection`](/docs/graphql-api/beta/reference/objects/channel-connection)  <Badge class="secondary" text="object"/><Bullet />[`ChannelEdge`](/docs/graphql-api/beta/reference/objects/channel-edge)  <Badge class="secondary" text="object"/><Bullet />[`Program`](/docs/graphql-api/beta/reference/objects/program)  <Badge class="secondary" text="object"/>
+
+
+

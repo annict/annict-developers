@@ -1,12 +1,20 @@
 # Annict Developers
 
+## Usage
+
 ```
 $ yarn
-$ yarn start
+$ yarn start -p 3100
 $ yarn build
 ```
 
-## Deployment
+Update GraphQL API reference:
+
+```
+$ yarn docusaurus graphql-to-doc:beta
+```
+
+Deployment:
 
 ```
 $ GIT_USER=shimbaco USE_SSH=true yarn deploy

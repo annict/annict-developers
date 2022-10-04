@@ -141,6 +141,19 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: [
+    [
+      "@edno/docusaurus2-graphql-doc-generator",
+      {
+        id: "beta",
+        schema: "../annict-web/app/graphql/beta/schema.graphql",
+        rootPath: "./docs",
+        baseURL: "graphql-api/beta/reference",
+        linkRoot: "/docs"
+      },
+    ],
+  ]
 };
 
 module.exports = config;
