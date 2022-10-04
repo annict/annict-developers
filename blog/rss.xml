@@ -4,10 +4,23 @@
         <title>Annict Developers Blog</title>
         <link>https://developers.annict.com/blog</link>
         <description>Annict Developers Blog</description>
-        <lastBuildDate>Tue, 04 Oct 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Oct 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[GraphQL APIの一部フィールドを非推奨にしました]]></title>
+            <link>https://developers.annict.com/blog/2022-10-05-node-fields-have-been-deprecated</link>
+            <guid>2022-10-05-node-fields-have-been-deprecated</guid>
+            <pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActivityEdge.node と]]></description>
+            <content:encoded><![CDATA[<p><a href="https://developers.annict.com/docs/graphql-api/beta/reference/objects/activity-edge" target="_blank" rel="noopener noreferrer">ActivityEdge.node</a> と
+<a href="https://developers.annict.com/docs/graphql-api/beta/reference/objects/series-work-edge" target="_blank" rel="noopener noreferrer">SeriesWorkEdge.node</a>
+というフィールド (以下 <code>.node</code> と表記します) があるんですが、実装を間違っていたようで、すでに存在するフィールドを上書きするようなことをしてしまっていました。</p><p>それが原因でGraphQL APIの実装で使用している <a href="https://github.com/rmosolgo/graphql-ruby" target="_blank" rel="noopener noreferrer">graphql</a> というライブラリの
+アップデートが難しい状態になっているため、これらを非推奨とし、代わりに <code>ActivityEdge.item</code> と <code>SeriesWorkEdge.item</code> というフィールド (以下 <code>.item</code> と表記します) を用意しました。
+これらは現状の <code>.node</code> と同じ値を返すようにしています。</p><p>もし <code>.node</code> を使用している場合は、単純に <code>.item</code> に書き換えるだけで問題ないはずです。</p><p><strong><code>.node</code> は1ヶ月後の11月5日以降に上書きをしていないときの値を返すようにします。</strong>
+もしこれらのフィールドを使っている場合は、お手数ですがそれまでに書き換えをお願いします。</p><p>GraphQL APIのスキーマを整理したいAnnictをよろしくお願いします。</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[GraphQL APIまわりのドキュメントを更新しました]]></title>
             <link>https://developers.annict.com/blog/2022-10-04-update-graphql-api-document</link>

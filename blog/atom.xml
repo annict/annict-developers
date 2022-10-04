@@ -2,11 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://developers.annict.com/blog</id>
     <title>Annict Developers Blog</title>
-    <updated>2022-10-04T00:00:00.000Z</updated>
+    <updated>2022-10-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://developers.annict.com/blog"/>
     <subtitle>Annict Developers Blog</subtitle>
     <icon>https://developers.annict.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[GraphQL APIの一部フィールドを非推奨にしました]]></title>
+        <id>2022-10-05-node-fields-have-been-deprecated</id>
+        <link href="https://developers.annict.com/blog/2022-10-05-node-fields-have-been-deprecated"/>
+        <updated>2022-10-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActivityEdge.node と]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://developers.annict.com/docs/graphql-api/beta/reference/objects/activity-edge" target="_blank" rel="noopener noreferrer">ActivityEdge.node</a> と
+<a href="https://developers.annict.com/docs/graphql-api/beta/reference/objects/series-work-edge" target="_blank" rel="noopener noreferrer">SeriesWorkEdge.node</a>
+というフィールド (以下 <code>.node</code> と表記します) があるんですが、実装を間違っていたようで、すでに存在するフィールドを上書きするようなことをしてしまっていました。</p><p>それが原因でGraphQL APIの実装で使用している <a href="https://github.com/rmosolgo/graphql-ruby" target="_blank" rel="noopener noreferrer">graphql</a> というライブラリの
+アップデートが難しい状態になっているため、これらを非推奨とし、代わりに <code>ActivityEdge.item</code> と <code>SeriesWorkEdge.item</code> というフィールド (以下 <code>.item</code> と表記します) を用意しました。
+これらは現状の <code>.node</code> と同じ値を返すようにしています。</p><p>もし <code>.node</code> を使用している場合は、単純に <code>.item</code> に書き換えるだけで問題ないはずです。</p><p><strong><code>.node</code> は1ヶ月後の11月5日以降に上書きをしていないときの値を返すようにします。</strong>
+もしこれらのフィールドを使っている場合は、お手数ですがそれまでに書き換えをお願いします。</p><p>GraphQL APIのスキーマを整理したいAnnictをよろしくお願いします。</p>]]></content>
+        <author>
+            <name>Shimba, Koji</name>
+            <uri>https://github.com/shimbaco</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GraphQL APIまわりのドキュメントを更新しました]]></title>
         <id>2022-10-04-update-graphql-api-document</id>
